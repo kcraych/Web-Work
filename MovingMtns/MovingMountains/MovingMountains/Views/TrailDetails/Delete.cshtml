@@ -1,0 +1,120 @@
+﻿@model MovingMountains.Models.TrailDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TrailDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.activityId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rangeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rangeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.landId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.landId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trailMiles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trailMiles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trailElevationMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trailElevationMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trailElevationGain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trailElevationGain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trailNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trailNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isHikeTrail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isHikeTrail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isBackpackTrail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isBackpackTrail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isBikeTrail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isBikeTrail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isSkiTrail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isSkiTrail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isVisitorTrail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isVisitorTrail)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

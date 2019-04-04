@@ -1,0 +1,50 @@
+﻿@model MovingMountains.Models.GovernedLand
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GovernedLand</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isNationalPark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isNationalPark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isStatePark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isStatePark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isNationalForest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isNationalForest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.landName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.landName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.landId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,34 @@
+﻿@model MovingMountains.Models.ActivityWishList
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActivityWishList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.myInterestScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.myInterestScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.myInterestNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.myInterestNotes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.activityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

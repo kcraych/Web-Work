@@ -1,0 +1,114 @@
+﻿@model MovingMountains.Models.ActivityDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActivityDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.locationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.driveHrsFromHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.driveHrsFromHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activityOtherDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityOtherDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activityNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activityWinter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityWinter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activitySpring)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activitySpring)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activitySummer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activitySummer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activityFall)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityFall)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activitySiteName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activitySiteName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activitySiteURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activitySiteURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.activityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
