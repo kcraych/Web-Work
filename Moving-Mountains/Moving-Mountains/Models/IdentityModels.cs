@@ -21,7 +21,7 @@ namespace Moving_Mountains.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("MountainsContext", throwIfV1Schema: false)
         {
         }
 
