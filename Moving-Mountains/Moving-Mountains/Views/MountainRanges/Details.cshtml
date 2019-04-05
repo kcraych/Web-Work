@@ -1,0 +1,42 @@
+﻿@model Moving_Mountains.Models.MountainRange
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MountainRange</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rangeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rangeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rangeTerritory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rangeTerritory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rangeSqMiles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rangeSqMiles)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.rangeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

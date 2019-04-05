@@ -1,0 +1,74 @@
+﻿@model Moving_Mountains.Models.Location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.locationType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationStreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationStreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationLatitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationLatitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.locationLongitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.locationLongitude)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.locationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

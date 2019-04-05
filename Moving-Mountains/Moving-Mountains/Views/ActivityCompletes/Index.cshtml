@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Moving_Mountains.Models.ActivityComplete>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.activityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateCompleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hrsToComplete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.myDifficultyScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.myActivityScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isFavorite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.myActivityNotes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateCompleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hrsToComplete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.myDifficultyScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.myActivityScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isFavorite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.myActivityNotes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.completeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.completeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.completeId })
+        </td>
+    </tr>
+}
+
+</table>

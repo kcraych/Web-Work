@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Moving_Mountains.Models.ActivityDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.locationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.driveHrsFromHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activityType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activityOtherDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activityNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activityWinter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activitySpring)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activitySummer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activityFall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activitySiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activitySiteURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.driveHrsFromHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityOtherDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityWinter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activitySpring)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activitySummer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activityFall)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activitySiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activitySiteURL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.activityId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.activityId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.activityId })
+        </td>
+    </tr>
+}
+
+</table>

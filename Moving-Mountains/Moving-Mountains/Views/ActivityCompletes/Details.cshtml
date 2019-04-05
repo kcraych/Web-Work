@@ -1,0 +1,74 @@
+﻿@model Moving_Mountains.Models.ActivityComplete
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActivityComplete</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.activityId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activityId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateCompleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateCompleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hrsToComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hrsToComplete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.myDifficultyScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.myDifficultyScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.myActivityScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.myActivityScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isFavorite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isFavorite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.myActivityNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.myActivityNotes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.completeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

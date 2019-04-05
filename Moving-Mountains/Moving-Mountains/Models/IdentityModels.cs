@@ -29,5 +29,15 @@ namespace Moving_Mountains.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<UserDemographic> UserDemographics { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<ActivityDetail> ActivityDetails { get; set; }
+        public DbSet<ActivityComplete> ActivityCompletes { get; set; }
+        public DbSet<ActivityPhoto> ActivityPhotos { get; set; }
+        public DbSet<ActivityWishList> ActivityWishLists { get; set; }
+        public DbSet<TrailDetail> TrailDetails { get; set; }
+        public DbSet<GovernedLand> GovernedLands { get; set; }
+        public DbSet<MountainRange> MountainRanges { get; set; }
     }
 }
