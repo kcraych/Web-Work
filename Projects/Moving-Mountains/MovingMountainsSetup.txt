@@ -1,0 +1,160 @@
+GET SET CODE
+	public DbSet<UserDemographic> UserDemographics { get; set; }
+	public DbSet<Location> Locations { get; set; }
+	public DbSet<ActivityDetail> ActivityDetails { get; set; }
+	public DbSet<ActivityComplete> ActivityCompletes { get; set; }
+	public DbSet<ActivityPhoto> ActivityPhotos { get; set; }
+	public DbSet<ActivityWishList> ActivityWishLists { get; set; }
+	public DbSet<TrailDetail> TrailDetails { get; set; }
+	public DbSet<GovernedLand> GovernedLands { get; set; }
+	public DbSet<MountainRange> MountainRanges { get; set; }
+
+ENUMS
+	public enum State
+        {
+            CO
+        }
+
+        public enum LocationType
+        {
+            Home,
+            Activity
+        }
+
+        public enum ActivityType
+        {
+            Trail,
+            Sightsee,
+            Course,
+            Other
+        }
+
+        public enum StateTerritory
+        {
+            Central,
+            Central_East,
+            Central_West,
+            North_Central,
+            North_East,
+            North_West,
+            South_Central,
+            South_East,
+            South_West
+        }
+
+MODELS
+
+public class ActivityComplete
+    {
+        [Key]
+        public Guid completeId { get; set; }
+        public Guid activityId { get; set; }
+        public DateTime dateCompleted { get; set; }
+        public float hrsToComplete { get; set; }
+        public int myDifficultyScore { get; set; }
+        public int myActivityScore { get; set; }
+        public bool isFavorite { get; set; }
+        public string myActivityNotes { get; set; }
+    }
+
+public class ActivityDetail
+    {
+        [Key]
+        public Guid activityId { get; set; }
+        public Guid locationId { get; set; }
+        public float driveHrsFromHome { get; set; }
+        public ActivityType activityType { get; set; }
+        public string activityOtherDesc { get; set; }
+        public string activityName { get; set; }
+        public string activityNotes { get; set; }
+        public bool activityWinter { get; set; }
+        public bool activitySpring { get; set; }
+        public bool activitySummer { get; set; }
+        public bool activityFall { get; set; }
+        public string activitySiteName { get; set; }
+        public string activitySiteURL { get; set; }
+    }
+
+public class ActivityPhoto
+    {
+        [Key]
+        public Guid photoId { get; set; }
+        public Guid completeId { get; set; }
+        public string myActivityPhoto { get; set; }
+    }
+
+public class ActivityWishList
+    {
+        [Key]
+        public Guid activityId { get; set; }
+        public int myInterestScore { get; set; }
+        public string myInterestNotes { get; set; }
+    }
+
+public class GovernedLand
+    {
+        [Key]
+        public Guid landId { get; set; }
+        public bool isNationalPark { get; set; }
+        public bool isStatePark { get; set; }
+        public bool isNationalForest { get; set; }
+        public string landName { get; set; }
+    }
+
+public class Location
+    {
+        public Guid locationId { get; set; }
+        public LocationType locationType { get; set; }
+        public string locationStreetAddress { get; set; }
+        public string locationCity { get; set; }
+        public State locationState { get; set; }
+        public string locationZip { get; set; }
+        public double locationLatitude { get; set; }
+        public double locationLongitude { get; set; }
+    }
+
+public class MountainRange
+    {
+        [Key]
+        public Guid rangeId { get; set; }
+        public string rangeName { get; set; }
+        public StateTerritory rangeTerritory { get; set; }
+        public int rangeSqMiles { get; set; }
+    }
+
+public class TrailDetail
+    {
+        [Key]
+        public Guid trailId { get; set; }
+        public Guid activityId { get; set; }
+        public Guid rangeId { get; set; }
+        public Guid landId { get; set; }
+        public float trailMiles { get; set; }
+        public int trailElevationMax { get; set; }
+        public int trailElevationGain { get; set; }
+        public string trailNotes { get; set; }
+        public bool isHikeTrail { get; set; }
+        public bool isBackpackTrail { get; set; }
+        public bool isBikeTrail { get; set; }
+        public bool isSkiTrail { get; set; }
+        public bool isVisitorTrail { get; set; }
+    }
+
+public class UserDemographic
+    {
+        [Key]
+        public string userId { get; set; }
+        public Guid locationId { get; set; }
+    }
+
+
+LAYOUT
+
+<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Activities", "Index", "ActivityDetails")</li>
+                    <li>@Html.ActionLink("Completes", "Index", "ActivityCompletes")</li>
+                    <li>@Html.ActionLink("Favorites", "Index", "ActivityWishList")</li>
+                    <li>@Html.ActionLink("Photos", "Index", "ActivityPhotos")</li>
+                    <li>@Html.ActionLink("Trails", "Index", "TrailDetails")</li>
+                    <li>@Html.ActionLink("Lands", "Index", "GovernedLands")</li>
+                    <li>@Html.ActionLink("Ranges", "Index", "MountainRanges")</li>
