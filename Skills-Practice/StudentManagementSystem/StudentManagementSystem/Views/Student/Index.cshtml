@@ -1,0 +1,18 @@
+﻿@using StudentManagementSystem.Models
+@model List<Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{ 
+    foreach (Student student in Model)
+    {
+        <h2>
+            <a href="/student/details/@student.Id">@student.FirstName @student.LastName</a>
+        </h2>
+    }
+}
+
