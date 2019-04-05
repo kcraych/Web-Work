@@ -20,8 +20,7 @@ namespace Moving_Mountains.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("MountainsContext", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("MountainsContext", throwIfV1Schema: false)
         {
         }
 
