@@ -17,7 +17,7 @@ namespace Moving_Mountains.Controllers
         // GET: ActivityPhotos
         public ActionResult Index()
         {
-            return View(db.ActivityPhotoes.ToList());
+            return View(db.ActivityPhotos.ToList());
         }
 
         // GET: ActivityPhotos/Details/5
@@ -27,7 +27,7 @@ namespace Moving_Mountains.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ActivityPhoto activityPhoto = db.ActivityPhotoes.Find(id);
+            ActivityPhoto activityPhoto = db.ActivityPhotos.Find(id);
             if (activityPhoto == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Moving_Mountains.Controllers
             if (ModelState.IsValid)
             {
                 activityPhoto.photoId = Guid.NewGuid();
-                db.ActivityPhotoes.Add(activityPhoto);
+                db.ActivityPhotos.Add(activityPhoto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Moving_Mountains.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ActivityPhoto activityPhoto = db.ActivityPhotoes.Find(id);
+            ActivityPhoto activityPhoto = db.ActivityPhotos.Find(id);
             if (activityPhoto == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Moving_Mountains.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ActivityPhoto activityPhoto = db.ActivityPhotoes.Find(id);
+            ActivityPhoto activityPhoto = db.ActivityPhotos.Find(id);
             if (activityPhoto == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Moving_Mountains.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)
         {
-            ActivityPhoto activityPhoto = db.ActivityPhotoes.Find(id);
-            db.ActivityPhotoes.Remove(activityPhoto);
+            ActivityPhoto activityPhoto = db.ActivityPhotos.Find(id);
+            db.ActivityPhotos.Remove(activityPhoto);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
