@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNet.Identity
+@if (User.Identity.IsAuthenticated)
+//Navigation options visible to logged in users
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Manage
+        </a>
+        <ul class="dropdown-menu schedule-navbar-nav" aria-labelledby="navbarDropdown">
+            <li class="dropdown-item">@Html.ActionLink("Completes", "Index", "ActivityCompletes")</li>
+            <li class="dropdown-item">@Html.ActionLink("Favorites", "Index", "ActivityWishList")</li>
+            <li class="dropdown-item">@Html.ActionLink("Photos", "Index", "ActivityPhotos")</li>
+        </ul>
+    </li>
+}
+else
+{
+
+}

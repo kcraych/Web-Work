@@ -323,6 +323,8 @@
     <Content Include="Views\UserDemographics\Details.cshtml" />
     <Content Include="Views\UserDemographics\Edit.cshtml" />
     <Content Include="Views\UserDemographics\Index.cshtml" />
+    <Content Include="Views\Shared\_ExplorePartial.cshtml" />
+    <Content Include="Views\Shared\_ManagePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
