@@ -210,6 +210,14 @@
     <Compile Include="Migrations\201904081511038_AddActivityLatLong.Designer.cs">
       <DependentUpon>201904081511038_AddActivityLatLong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904081652331_AddFavoriteId.cs" />
+    <Compile Include="Migrations\201904081652331_AddFavoriteId.Designer.cs">
+      <DependentUpon>201904081652331_AddFavoriteId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904082015509_UpdateActivityLatLongToDouble.cs" />
+    <Compile Include="Migrations\201904082015509_UpdateActivityLatLongToDouble.Designer.cs">
+      <DependentUpon>201904082015509_UpdateActivityLatLongToDouble.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ActivityComplete.cs" />
@@ -352,6 +360,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904081511038_AddActivityLatLong.resx">
       <DependentUpon>201904081511038_AddActivityLatLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081652331_AddFavoriteId.resx">
+      <DependentUpon>201904081652331_AddFavoriteId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904082015509_UpdateActivityLatLongToDouble.resx">
+      <DependentUpon>201904082015509_UpdateActivityLatLongToDouble.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
