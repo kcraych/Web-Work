@@ -8,6 +8,11 @@ namespace Moving_Mountains.Models
 {
     public class ActivityComplete
     {
+        public ActivityComplete()
+        {
+            completeId = Guid.NewGuid();
+        }
+
         [Key]
         public Guid completeId { get; set; }
         public Guid activityId { get; set; }

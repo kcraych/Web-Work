@@ -8,6 +8,11 @@ namespace Moving_Mountains.Models
 {
     public class GovernedLand
     {
+        public GovernedLand()
+        {
+            landId = Guid.NewGuid();
+        }
+
         [Key]
         public Guid landId { get; set; }
         public bool isNationalPark { get; set; }

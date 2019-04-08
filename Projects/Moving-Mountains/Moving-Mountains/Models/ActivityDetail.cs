@@ -9,12 +9,18 @@ namespace Moving_Mountains.Models
 {
     public class ActivityDetail
     {
+
+        public ActivityDetail()
+        {
+            activityId = Guid.NewGuid();
+        }
+
         [Key]
         public Guid activityId { get; set; }
         public Guid locationId { get; set; } //nearest town
         public bool activityInTown { get; set; }
-        public float activityLatitude { get; set; }
-        public float activityLongitude { get; set; }
+        public double activityLatitude { get; set; }
+        public double activityLongitude { get; set; }
         public float driveHrsFromHome { get; set; }
         public ActivityType activityType { get; set; }
         public string activityOtherDesc { get; set; }

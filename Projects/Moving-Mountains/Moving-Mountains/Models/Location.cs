@@ -8,6 +8,11 @@ namespace Moving_Mountains.Models
 {
     public class Location
     {
+        public Location()
+        {
+            locationId = Guid.NewGuid();
+        }
+
         public Guid locationId { get; set; }
         public LocationType locationType { get; set; }
         public string locationStreetAddress { get; set; }

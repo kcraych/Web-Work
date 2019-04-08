@@ -9,6 +9,11 @@ namespace Moving_Mountains.Models
 {
     public class MountainRange
     {
+        public MountainRange()
+        {
+            rangeId = Guid.NewGuid();
+        }
+
         [Key]
         public Guid rangeId { get; set; }
         public string rangeName { get; set; }

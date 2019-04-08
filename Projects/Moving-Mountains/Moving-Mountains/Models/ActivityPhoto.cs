@@ -8,6 +8,12 @@ namespace Moving_Mountains.Models
 {
     public class ActivityPhoto
     {
+
+        public ActivityPhoto()
+        {
+            photoId = Guid.NewGuid();
+        }
+
         [Key]
         public Guid photoId { get; set; }
         public Guid completeId { get; set; }

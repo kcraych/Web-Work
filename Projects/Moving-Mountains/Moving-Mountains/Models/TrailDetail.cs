@@ -8,9 +8,13 @@ namespace Moving_Mountains.Models
 {
     public class TrailDetail
     {
+        public TrailDetail()
+        {
+            trailId = Guid.NewGuid();
+        }
+
         [Key]
         public Guid trailId { get; set; }
-
         //For the next 3 - what's more ideal...storing just the Id and using joins to access the object
         //information?  Or, storing the actual object?  I would assume the later can bring large
         //overhead issues depending on the size of the application.
